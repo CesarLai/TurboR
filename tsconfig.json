@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "resolveJsonModule": true,
+    "paths": {
+      "@bin/*": [
+        "bin/*"
+      ],
+      "@commands": [
+        "commands"
+      ],
+      "@commands/*": [
+        "commands/*"
+      ],
+      "@actions": [
+        "actions"
+      ],
+      "@actions/*": [
+        "actions/*"
+      ],
+      "@libs": [
+        "libs"
+      ],
+      "@libs/*": [
+        "libs/*"
+      ]
+    }
+  },
+  "include": [
+    "bin/**/*.ts",
+    "commands/**/*.ts",
+    "actions/**/*.ts",
+    "libs/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "test",
+    "**/*spec.ts"
+  ]
+}

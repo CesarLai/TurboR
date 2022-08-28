@@ -1,0 +1,91 @@
+{
+  "name": "@cesarlai/cesarlai-compiler",
+  "version": "0.0.1",
+  "description": "A React/TypeScript lib compiler.",
+  "author": "Cesar Lai <git@cesarlai.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CesarLai/cesarlai-compiler.git"
+  },
+  "license": "MIT",
+  "homepage": ".",
+  "scripts": {
+    "dev": "ts-node -r tsconfig-paths/register -P tsconfig.json",
+    "prebuild": "rimraf dist",
+    "build": "tsc && tsc-alias",
+    "lint": "eslint ./ --ext .ts,.tsx --color --fix",
+    "commit": "git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "bin": {
+    "clc": "bin/clc.js"
+  },
+  "files": [
+    "**/*.d.ts",
+    "**/*.js.map",
+    "**/*.js",
+    "CHANGELOG.md",
+    "README.md",
+    "package.json",
+    "tsconfig.tsbuildinfo"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "compiler",
+    "rollup",
+    "commander"
+  ],
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "commander": "^9.3.0",
+    "json5": "^2.2.1",
+    "node-emoji": "^1.11.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@commitlint/types": "^17.0.0",
+    "@types/node": "^17.0.42",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "commitizen": "^4.2.4",
+    "conventional-changelog": "^3.1.25",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.8.1",
+    "tsc-alias": "^1.6.10",
+    "typescript": "^4.7.3"
+  },
+  "engines": {
+    "node": ">= 12.0.0",
+    "npm": ">= 6.11.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && pnpm run eslint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*{.js,.jsx,.ts,.tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
