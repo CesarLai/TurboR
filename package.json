@@ -1,7 +1,7 @@
 {
-  "name": "@cesarlai/cesarlai-compiler",
+  "name": "@cesarlai/turbor",
   "version": "0.0.1",
-  "description": "A React/TypeScript lib compiler.",
+  "description": "A React/TypeScript Framework bundle tool.",
   "author": "Cesar Lai <git@cesarlai.com>",
   "repository": {
     "type": "git",

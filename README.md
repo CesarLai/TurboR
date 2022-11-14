@@ -1,3 +1,3 @@
-# cesarlai-compiler
+# TurboR
 
-A React/TypeScript lib compiler.
+A React/TypeScript Framework bundle tool.
