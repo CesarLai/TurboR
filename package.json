@@ -1,11 +1,11 @@
 {
   "name": "@cesarlai/turbor",
   "version": "0.0.1",
-  "description": "A React/TypeScript Framework bundle tool.",
+  "description": "A React Framework bundle tool, support TypeScript.",
   "author": "Cesar Lai <git@cesarlai.com>",
   "repository": {
     "type": "git",
-    "url": "git@github.com:CesarLai/cesarlai-compiler.git"
+    "url": "git@github.com:CesarLai/TurboR.git"
   },
   "license": "MIT",
   "homepage": ".",
@@ -18,7 +18,7 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "bin": {
-    "clc": "bin/clc.js"
+    "turbor": "bin/turbor.js"
   },
   "files": [
     "**/*.d.ts",
@@ -33,7 +33,8 @@
     "react",
     "typescript",
     "compiler",
-    "rollup",
+    "webpack",
+    "swc",
     "commander"
   ],
   "dependencies": {
@@ -67,9 +68,9 @@
     "tsc-alias": "^1.6.10",
     "typescript": "^4.7.3"
   },
+  "packageManager": "pnpm@7.3.0",
   "engines": {
-    "node": ">= 12.0.0",
-    "npm": ">= 6.11.0"
+    "node": ">= 14.6.0"
   },
   "config": {
     "commitizen": {
