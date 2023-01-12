@@ -1,3 +1,3 @@
 # TurboR
 
-A React Framework bundle tool, support TypeScript.
+A React framework bundle tool, supporting TypeScript.

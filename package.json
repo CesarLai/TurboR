@@ -1,7 +1,7 @@
 {
   "name": "@cesarlai/turbor",
   "version": "0.0.1",
-  "description": "A React Framework bundle tool, support TypeScript.",
+  "description": "A React framework bundle tool, supporting TypeScript.",
   "author": "Cesar Lai <git@cesarlai.com>",
   "repository": {
     "type": "git",
